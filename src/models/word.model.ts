@@ -22,7 +22,6 @@ export class Word extends Entity {
 
   @property({
     type: 'string',
-    required: true,
   })
   urlSearchPhoto?: string;
 
