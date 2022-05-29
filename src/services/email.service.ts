@@ -7,6 +7,7 @@ export class EmailService {
   /**
    * If using gmail see https://nodemailer.com/usage/using-gmail/
    */
+  //
   private static async setupTransporter() {
     return createTransport({
       host: process.env.SMTP_SERVER,
