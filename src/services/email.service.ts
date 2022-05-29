@@ -12,7 +12,7 @@ export class EmailService {
     return createTransport({
       host: process.env.SMTP_SERVER,
       port: +process.env.SMTP_PORT!,
-      secure: false, // upgrade later with STARTTLS
+      secure: true, // upgrade later with STARTTLS
       auth: {
         user: process.env.SMTP_USERNAME,
         pass: process.env.SMTP_PASSWORD,
