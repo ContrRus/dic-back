@@ -30,7 +30,9 @@ export class EmailService {
           <p>Hi there,</p>
           <p style="color: red;">We received a request to reset the password for your account</p>
           <p>To reset your password click on the link provided below</p>
-          <a href="${process.env.APPLICATION_URL}/reset-password-finish/${user.resetKey}">Reset your password link</a>
+          <a href="${
+            process.env.APPLICATION_URL ?? `https://dict-front.herokuapp.com`
+          }/reset-password-finish/${user.resetKey}">Reset your password link</a>
           <p>If you didn’t request to reset your password, please ignore this email or reset your password to protect your account.</p>
           <p>Thanks</p>
           <p>Dictionary app creator Ruslan</p>
