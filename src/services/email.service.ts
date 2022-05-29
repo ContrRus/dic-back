@@ -11,7 +11,7 @@ export class EmailService {
   private static async setupTransporter() {
     return createTransport({
       host: process.env.SMTP_SERVER,
-      port: +process.env.SMTP_PORT!,
+      port: +process.env.SMTP_PORT! || 465,
       secure: true, // upgrade later with STARTTLS
       auth: {
         user: process.env.SMTP_USERNAME,
