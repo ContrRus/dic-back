@@ -10,12 +10,12 @@ export class EmailService {
   //
   private static async setupTransporter() {
     return createTransport({
-      host: process.env.SMTP_SERVER || 'smtp.gmail.com',
+      host: process.env.SMTP_SERVER ?? 'smtp.gmail.com',
       port: +process.env.SMTP_PORT! || 465,
       secure: true, // upgrade later with STARTTLS
       auth: {
-        user: process.env.SMTP_USERNAME,
-        pass: process.env.SMTP_PASSWORD,
+        user: process.env.SMTP_USERNAME ?? 'knightn1ofamber@gmail.com',
+        pass: process.env.SMTP_PASSWORD ?? 'cxvpwvsffhlcpapp',
       },
     });
   }
