@@ -10,7 +10,7 @@ export class EmailService {
   //
   private static async setupTransporter() {
     return createTransport({
-      host: process.env.SMTP_SERVER,
+      host: process.env.SMTP_SERVER || 'smtp.gmail.com',
       port: +process.env.SMTP_PORT! || 465,
       secure: true, // upgrade later with STARTTLS
       auth: {
