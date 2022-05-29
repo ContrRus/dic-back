@@ -16,6 +16,12 @@ export class User extends Entity {
 
   @property({
     type: 'string',
+    // required: true,
+  })
+  resetKey?: string;
+
+  @property({
+    type: 'string',
     id: true,
   })
   _id: string;
