@@ -18,7 +18,7 @@ if (require.main === module) {
   // Run the application
   const config = {
     rest: {
-      port: +(process.env.PORT ?? 3001),
+      port: process.env.PORT || 3001,
       host: '0.0.0.0',
       // host:  process.env.HOST,
       // The `gracePeriodForClose` provides a graceful close for http/https
