@@ -1,10 +1,10 @@
 import {inject} from '@loopback/core';
 import {
-  Request,
-  RestBindings,
   get,
+  Request,
   response,
   ResponseObject,
+  RestBindings,
 } from '@loopback/rest';
 
 /**
@@ -39,7 +39,6 @@ const PING_RESPONSE: ResponseObject = {
  */
 export class PingController {
   constructor(@inject(RestBindings.Http.REQUEST) private req: Request) {}
-
   // Map to `GET /ping`
   @get('/ping')
   @response(200, PING_RESPONSE)
